@@ -46,7 +46,12 @@ for (const link of requiredLinks) {
   assert(html.includes(link), `Missing required link: ${link}`);
 }
 
-assert(!html.includes("<script src="), "Static page should not load runtime JavaScript");
+const scriptOpenTags = html.match(/<script\b[^>]*>/gi) ?? [];
+for (const tag of scriptOpenTags) {
+  const hasJsonLdType = /type\s*=\s*["']application\/ld\+json["']/i.test(tag);
+  assert(hasJsonLdType, "Static page should only contain JSON-LD script tags");
+}
+
 assert(html.includes("István Madarász"), "Name should preserve accents");
 assert(css.includes("@media (prefers-reduced-motion: reduce)"), "CSS must respect reduced motion");
 assert(css.includes("@container"), "CSS should include at least one container query");

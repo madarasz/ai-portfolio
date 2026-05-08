@@ -112,6 +112,15 @@
     padding-block: 22px;
   }
 
+  .topline a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 40px;
+    padding-inline: 0.34rem;
+    text-decoration: none;
+    border-radius: 999px;
+  }
+
   .eyebrow,
   .project-index {
     color: var(--cyan);
@@ -281,5 +290,11 @@
   .hero {
     min-height: auto;
     padding-block: 56px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.7rem, 13vw, 3.8rem);
+    line-height: 0.86;
+    letter-spacing: -0.075em;
   }
 }

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://madarasz.github.io/ai-portfolio/sitemap.xml

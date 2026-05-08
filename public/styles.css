@@ -208,6 +208,8 @@
   }
 
   .project-shot {
+    position: relative;
+    overflow: hidden;
     min-height: 280px;
     border-radius: var(--radius-lg);
     border: 1px solid rgba(255, 255, 255, 0.22);
@@ -216,6 +218,15 @@
       radial-gradient(circle at 30% 20%, var(--cyan), transparent 30%),
       radial-gradient(circle at 75% 70%, var(--magenta), transparent 34%),
       var(--violet);
+  }
+
+  .project-shot img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
   }
 
   .project-body {
@@ -230,6 +241,13 @@
     align-items: flex-start;
     justify-content: space-between;
     gap: 16px;
+  }
+
+  .project-actions {
+    display: grid;
+    justify-items: end;
+    gap: 8px;
+    flex: 0 0 auto;
   }
 
   .project-body h3 {
@@ -340,5 +358,9 @@
 
   .project-heading .repo-link {
     margin-top: 2px;
+  }
+
+  .project-actions {
+    justify-items: start;
   }
 }

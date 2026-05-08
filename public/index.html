@@ -20,6 +20,10 @@
     <symbol id="github-logo" viewBox="0 0 16 16">
       <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.53 7.53 0 0 1 8 3.86c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/>
     </symbol>
+    <symbol id="world-icon" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/>
+      <path d="M3 12h18M12 3c2.5 2.5 3.75 5.5 3.75 9S14.5 18.5 12 21c-2.5-2.5-3.75-5.5-3.75-9S9.5 5.5 12 3Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
   </svg>
   <div class="ambient ambient-one" aria-hidden="true"></div>
   <div class="ambient ambient-two" aria-hidden="true"></div>
@@ -32,11 +36,13 @@
     <section class="hero" aria-labelledby="page-title">
       <p class="eyebrow">Portfolio of István Madarász</p>
       <h1 id="page-title">Building practical software with coding agents.</h1>
-      <p class="hero-copy">A focused collection of projects shaped with AI-assisted development: rules assistants, community web apps, tabletop tools, and experiments in making software faster to explore and easier to ship.</p>
+      <p class="hero-copy">A focused collection of projects shaped with AI-assisted development. Built with coding agents and specification driven development with extensive automated testing.</p>
       <ul class="tags hero-tools" aria-label="AI coding tools used">
         <li>Claude Code</li>
         <li>Codex</li>
         <li>GitHub Copilot</li>
+        <li>Spec Driven Development</li>
+        <li>CI/CD</li>
       </ul>
     </section>
   </header>
@@ -46,44 +52,55 @@
       <h2 id="projects-title">Projects</h2>
     </div>
     <article class="project-card featured">
-      <div class="project-shot shot-rules" role="img" aria-label="Stylized placeholder screenshot for Kill Team Rules Bot"></div>
+      <div class="project-shot shot-rules">
+        <img src="assets/kt-rulebot.png" alt="Kill Team Rules Bot screenshot" width="598" height="629">
+      </div>
       <div class="project-body">
         <div class="project-heading">
-          <h3>Kill Team Rules Bot</h3>
+          <h3>Board Game Rules Bot</h3>
           <a class="repo-link" href="https://github.com/madarasz/kt-rules-bot" aria-label="View Kill Team Rules Bot on GitHub">
             <svg aria-hidden="true" focusable="false"><use href="#github-logo"></use></svg>
             <span>GitHub</span>
           </a>
         </div>
-        <p>Discord rules assistant for Warhammer 40k: Kill Team, using retrieval-augmented generation to answer rules questions from structured sources.</p>
+        <p>Discord rules bot for <em>Warhammer 40k: Kill Team</em>. It has the ability answer complex questions, while providing rules citations and detailed logical explanation. It uses LLM + RAG for providing responses. It's provider-agnostic and can itegrate with a huge number of models: <em>OpenAI, Anthropic, Gemini, Grok, Mistral, DeepSeek</em> and <em>Kimi</em>.</p>
+        <p>Features comprehensive unit tests, integration tests, retrieval tests, RAGAS-like LLM-as-a-judge evaluation, model comparision tests and in-production observability.</p>
         <ul class="tags" aria-label="Technologies used">
-          <li>Python 3.12</li>
-          <li>discord.py</li>
+          <li>Python</li>
           <li>RAG</li>
           <li>ChromaDB</li>
-          <li>BM25</li>
           <li>Pydantic</li>
-          <li>LLMs</li>
+          <li>LLM as a judge</li>
+          <li>Spec Kit</li>
         </ul>
       </div>
     </article>
 
     <article class="project-card">
-      <div class="project-shot shot-sector" role="img" aria-label="Stylized placeholder screenshot for Sector Hungaricus v2"></div>
+      <div class="project-shot shot-sector">
+        <img src="assets/sectorhungaricus.png" alt="Sector Hungaricus v2 screenshot" width="1049" height="614">
+      </div>
       <div class="project-body">
         <div class="project-heading">
-          <h3>Sector Hungaricus v2</h3>
-          <a class="repo-link" href="https://github.com/madarasz/sectorhungaricus-v2" aria-label="View Sector Hungaricus v2 on GitHub">
-            <svg aria-hidden="true" focusable="false"><use href="#github-logo"></use></svg>
-            <span>GitHub</span>
-          </a>
+          <h3>Sector Hungaricus</h3>
+          <div class="project-actions">
+            <a class="repo-link" href="https://github.com/madarasz/sectorhungaricus-v2" aria-label="View Sector Hungaricus v2 on GitHub">
+              <svg aria-hidden="true" focusable="false"><use href="#github-logo"></use></svg>
+              <span>GitHub</span>
+            </a>
+            <a class="repo-link" href="https://sectorhungaricus.hu/en/" aria-label="Visit Sector Hungaricus website">
+              <svg aria-hidden="true" focusable="false"><use href="#world-icon"></use></svg>
+              <span>Website</span>
+            </a>
+          </div>
         </div>
-        <p>A refreshed web presence for Sector Hungaricus, kept intentionally conservative until final project details are supplied.</p>
+        <p>Website for the Sector Hungaricus community. Git-based CMS (Decap CMS), gallery system, tournament tracking. Responsive design generated from Figma. Playwright E2E tests.</p>
         <ul class="tags" aria-label="Technologies used">
-          <li>Static/Web</li>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>AI-assisted development</li>
+          <li>Decap CMS</li>
+          <li>React</li>
+          <li>Next.js</li>
+          <li>Tailwind</li>
+          <li>Playwright</li>
         </ul>
       </div>
     </article>

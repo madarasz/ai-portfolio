@@ -16,6 +16,11 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <svg class="icon-sprite" aria-hidden="true" focusable="false">
+    <symbol id="github-logo" viewBox="0 0 16 16">
+      <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.53 7.53 0 0 1 8 3.86c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/>
+    </symbol>
+  </svg>
   <div class="ambient ambient-one" aria-hidden="true"></div>
   <div class="ambient ambient-two" aria-hidden="true"></div>
 
@@ -23,26 +28,33 @@
     <a class="skip-link" href="#projects">Skip to projects</a>
     <nav class="topline" aria-label="Primary">
       <a href="https://www.linkedin.com/in/istvanmadarasz/">LinkedIn</a>
-      <a href="#projects">Projects</a>
     </nav>
     <section class="hero" aria-labelledby="page-title">
-      <p class="eyebrow">Portfolio of AI-assisted software work</p>
-      <h1 id="page-title">István Madarász builds practical software with coding agents.</h1>
+      <p class="eyebrow">Portfolio of István Madarász</p>
+      <h1 id="page-title">Building practical software with coding agents.</h1>
       <p class="hero-copy">A focused collection of projects shaped with AI-assisted development: rules assistants, community web apps, tabletop tools, and experiments in making software faster to explore and easier to ship.</p>
-      <a class="primary-link" href="https://www.linkedin.com/in/istvanmadarasz/">Connect on LinkedIn</a>
+      <ul class="tags hero-tools" aria-label="AI coding tools used">
+        <li>Claude Code</li>
+        <li>Codex</li>
+        <li>GitHub Copilot</li>
+      </ul>
     </section>
   </header>
 
   <main id="projects" class="projects" aria-labelledby="projects-title">
     <div class="section-heading">
-      <p class="eyebrow">Selected builds</p>
-      <h2 id="projects-title">Projects built with AI and coding agents</h2>
+      <h2 id="projects-title">Projects</h2>
     </div>
     <article class="project-card featured">
       <div class="project-shot shot-rules" role="img" aria-label="Stylized placeholder screenshot for Kill Team Rules Bot"></div>
       <div class="project-body">
-        <p class="project-index">01</p>
-        <h3>Kill Team Rules Bot</h3>
+        <div class="project-heading">
+          <h3>Kill Team Rules Bot</h3>
+          <a class="repo-link" href="https://github.com/madarasz/kt-rules-bot" aria-label="View Kill Team Rules Bot on GitHub">
+            <svg aria-hidden="true" focusable="false"><use href="#github-logo"></use></svg>
+            <span>GitHub</span>
+          </a>
+        </div>
         <p>Discord rules assistant for Warhammer 40k: Kill Team, using retrieval-augmented generation to answer rules questions from structured sources.</p>
         <ul class="tags" aria-label="Technologies used">
           <li>Python 3.12</li>
@@ -53,15 +65,19 @@
           <li>Pydantic</li>
           <li>LLMs</li>
         </ul>
-        <a class="repo-link" href="https://github.com/madarasz/kt-rules-bot">View Kill Team Rules Bot on GitHub</a>
       </div>
     </article>
 
     <article class="project-card">
       <div class="project-shot shot-sector" role="img" aria-label="Stylized placeholder screenshot for Sector Hungaricus v2"></div>
       <div class="project-body">
-        <p class="project-index">02</p>
-        <h3>Sector Hungaricus v2</h3>
+        <div class="project-heading">
+          <h3>Sector Hungaricus v2</h3>
+          <a class="repo-link" href="https://github.com/madarasz/sectorhungaricus-v2" aria-label="View Sector Hungaricus v2 on GitHub">
+            <svg aria-hidden="true" focusable="false"><use href="#github-logo"></use></svg>
+            <span>GitHub</span>
+          </a>
+        </div>
         <p>A refreshed web presence for Sector Hungaricus, kept intentionally conservative until final project details are supplied.</p>
         <ul class="tags" aria-label="Technologies used">
           <li>Static/Web</li>
@@ -69,15 +85,19 @@
           <li>CSS</li>
           <li>AI-assisted development</li>
         </ul>
-        <a class="repo-link" href="https://github.com/madarasz/sectorhungaricus-v2">View Sector Hungaricus v2 on GitHub</a>
       </div>
     </article>
 
     <article class="project-card">
       <div class="project-shot shot-datacard" role="img" aria-label="Stylized placeholder screenshot for Datacard Manager"></div>
       <div class="project-body">
-        <p class="project-index">03</p>
-        <h3>Datacard Manager</h3>
+        <div class="project-heading">
+          <h3>Datacard Manager</h3>
+          <a class="repo-link" href="https://github.com/madarasz/datacard-manager" aria-label="View Datacard Manager on GitHub">
+            <svg aria-hidden="true" focusable="false"><use href="#github-logo"></use></svg>
+            <span>GitHub</span>
+          </a>
+        </div>
         <p>Tooling for managing tabletop datacards and related game reference material, with first-version copy ready to refine when screenshots are available.</p>
         <ul class="tags" aria-label="Technologies used">
           <li>Web app</li>
@@ -85,15 +105,19 @@
           <li>UX</li>
           <li>AI-assisted development</li>
         </ul>
-        <a class="repo-link" href="https://github.com/madarasz/datacard-manager">View Datacard Manager on GitHub</a>
       </div>
     </article>
 
     <article class="project-card">
       <div class="project-shot shot-abr" role="img" aria-label="Stylized placeholder screenshot for Always Be Running"></div>
       <div class="project-body">
-        <p class="project-index">04</p>
-        <h3>Always Be Running</h3>
+        <div class="project-heading">
+          <h3>Always Be Running</h3>
+          <a class="repo-link" href="https://github.com/madarasz/always-be-running" aria-label="View Always Be Running on GitHub">
+            <svg aria-hidden="true" focusable="false"><use href="#github-logo"></use></svg>
+            <span>GitHub</span>
+          </a>
+        </div>
         <p>AlwaysBeRunning.net, a community web app with a PHP/Laravel-era stack and tournament/event tooling roots.</p>
         <ul class="tags" aria-label="Technologies used">
           <li>PHP</li>
@@ -104,15 +128,19 @@
           <li>Composer</li>
           <li>Cypress</li>
         </ul>
-        <a class="repo-link" href="https://github.com/madarasz/always-be-running">View Always Be Running on GitHub</a>
       </div>
     </article>
 
     <article class="project-card">
       <div class="project-shot shot-tables" role="img" aria-label="Stylized placeholder screenshot for Tournament Tables"></div>
       <div class="project-body">
-        <p class="project-index">05</p>
-        <h3>Tournament Tables</h3>
+        <div class="project-heading">
+          <h3>Tournament Tables</h3>
+          <a class="repo-link" href="https://github.com/madarasz/tournament-tables" aria-label="View Tournament Tables on GitHub">
+            <svg aria-hidden="true" focusable="false"><use href="#github-logo"></use></svg>
+            <span>GitHub</span>
+          </a>
+        </div>
         <p>A tournament table utility for organizing event data into clearer, more usable views.</p>
         <ul class="tags" aria-label="Technologies used">
           <li>Web app</li>
@@ -121,14 +149,9 @@
           <li>CSS</li>
           <li>AI-assisted development</li>
         </ul>
-        <a class="repo-link" href="https://github.com/madarasz/tournament-tables">View Tournament Tables on GitHub</a>
       </div>
     </article>
   </main>
-
-  <footer class="site-footer">
-    <p>Static portfolio for István Madarász. Built to keep the projects visible, fast, and easy to update.</p>
-  </footer>
 
   <script type="application/ld+json">
   {

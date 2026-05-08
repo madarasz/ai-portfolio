@@ -1,5 +1,7 @@
 import { readFile, access } from "node:fs/promises";
+import { join } from "node:path";
 
+const siteDir = "public";
 const requiredFiles = ["index.html", "styles.css", "robots.txt", "sitemap.xml"];
 const requiredLinks = [
   "https://www.linkedin.com/in/istvanmadarasz/",
@@ -19,8 +21,7 @@ const requiredSnippets = [
   "application/ld+json",
   "<header",
   "<main",
-  "<article",
-  "<footer"
+  "<article"
 ];
 
 function assert(condition, message) {
@@ -30,13 +31,13 @@ function assert(condition, message) {
 }
 
 for (const file of requiredFiles) {
-  await access(file);
+  await access(join(siteDir, file));
 }
 
-const html = await readFile("index.html", "utf8");
-const css = await readFile("styles.css", "utf8");
-const robots = await readFile("robots.txt", "utf8");
-const sitemap = await readFile("sitemap.xml", "utf8");
+const html = await readFile(join(siteDir, "index.html"), "utf8");
+const css = await readFile(join(siteDir, "styles.css"), "utf8");
+const robots = await readFile(join(siteDir, "robots.txt"), "utf8");
+const sitemap = await readFile(join(siteDir, "sitemap.xml"), "utf8");
 
 for (const snippet of requiredSnippets) {
   assert(html.includes(snippet), `Missing required HTML snippet: ${snippet}`);

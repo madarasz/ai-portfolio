@@ -45,6 +45,7 @@
       radial-gradient(circle at 86% 18%, rgba(255, 0, 110, 0.22), transparent 30rem),
       linear-gradient(135deg, var(--surface), var(--surface-2) 52%, #02030a);
     line-height: 1.5;
+    overflow-x: clip;
   }
 
   a {
@@ -207,6 +208,8 @@
   }
 
   .project-card {
+    --card-rest-x: 0%;
+    --card-edge-x: -34vw;
     display: grid;
     grid-template-columns: minmax(220px, 0.9fr) minmax(260px, 1.1fr);
     gap: 22px;
@@ -218,10 +221,12 @@
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.04));
     box-shadow: var(--shadow-glow);
     backdrop-filter: blur(22px);
+    transform: translateX(var(--card-rest-x));
   }
 
   .project-card:nth-of-type(even) {
-    transform: translateX(5%);
+    --card-rest-x: 5%;
+    --card-edge-x: 34vw;
   }
 
   .project-shot {
@@ -297,6 +302,15 @@
 }
 
 @layer motion {
+  @supports (animation-timeline: view()) {
+    .project-card {
+      animation: card-scroll-reveal both linear;
+      animation-timeline: view(block);
+      animation-range: entry -8% exit 108%;
+      will-change: transform, opacity, filter;
+    }
+  }
+
   .ambient {
     position: fixed;
     inset: auto;
@@ -332,6 +346,22 @@
     }
   }
 
+  @keyframes card-scroll-reveal {
+    0%,
+    10% {
+      opacity: 0.34;
+      filter: blur(18px) saturate(0.72);
+      transform: translateX(calc(var(--card-rest-x) + var(--card-edge-x))) scale(0.985);
+    }
+
+    33%,
+    100% {
+      opacity: 1;
+      filter: blur(0) saturate(1);
+      transform: translateX(var(--card-rest-x)) scale(1);
+    }
+  }
+
   @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
@@ -339,6 +369,14 @@
       animation-duration: 0.01ms !important;
       animation-iteration-count: 1 !important;
       scroll-behavior: auto !important;
+    }
+
+    .project-card {
+      animation: none !important;
+      filter: none !important;
+      opacity: 1 !important;
+      transform: translateX(var(--card-rest-x)) !important;
+      will-change: auto;
     }
   }
 }
@@ -349,7 +387,7 @@
   }
 
   .project-card:nth-of-type(even) {
-    transform: none;
+    --card-rest-x: 0%;
   }
 }
 

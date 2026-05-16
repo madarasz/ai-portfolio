@@ -209,7 +209,7 @@
 
   .project-card {
     --card-rest-x: 0%;
-    --card-edge-x: -34vw;
+    --card-edge-x: clamp(-34vw, calc(((100vw - 100%) / -2) + 2px - var(--card-rest-x)), 0px);
     display: grid;
     grid-template-columns: minmax(220px, 0.9fr) minmax(260px, 1.1fr);
     gap: 22px;
@@ -225,8 +225,8 @@
   }
 
   .project-card:nth-of-type(even) {
-    --card-rest-x: 5%;
-    --card-edge-x: 34vw;
+    --card-rest-x: clamp(0px, calc((100vw - 100%) / 2 - 2px), 5%);
+    --card-edge-x: clamp(0px, calc((100vw - 100%) / 2 - var(--card-rest-x) - 2px), 34vw);
   }
 
   .project-shot {
@@ -385,7 +385,9 @@
   .project-card {
     grid-template-columns: 1fr;
   }
+}
 
+@media (max-width: 1300px) {
   .project-card:nth-of-type(even) {
     --card-rest-x: 0%;
   }
@@ -422,6 +424,9 @@
   }
 
   .project-actions {
-    justify-items: start;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    align-items: flex-start;
   }
 }

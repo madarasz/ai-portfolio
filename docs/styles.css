@@ -119,8 +119,10 @@
     position: absolute;
     inset: 22px 0 auto auto;
     display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     justify-content: flex-end;
-    gap: 18px;
+    gap: 10px;
   }
 
   .topline a {
@@ -132,6 +134,21 @@
     text-decoration: none;
     border-radius: 999px;
     background: rgba(255, 255, 255, 0.08);
+  }
+
+  .topline .profile-link {
+    width: 72px;
+    height: 72px;
+    min-height: 0;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  .profile-link img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
   }
 
   .eyebrow {
@@ -341,12 +358,18 @@
     justify-content: flex-end;
   }
 
+  .topline .profile-link {
+    width: 56px;
+    height: 56px;
+  }
+
   .hero {
     min-height: auto;
     padding-block: 22px 40px;
   }
 
   .hero h1 {
+    max-width: calc(100% - 128px);
     font-size: clamp(2.45rem, 11vw, 3.4rem);
     line-height: 0.86;
     letter-spacing: -0.04em;

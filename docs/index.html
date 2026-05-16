@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>István Madarász | AI-Built Project Portfolio</title>
+  <meta name="description" content="A portfolio of practical software projects by István Madarász, built with AI and coding agents.">
+  <link rel="canonical" href="https://madarasz.github.io/ai-portfolio/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="István Madarász | AI-Built Project Portfolio">
+  <meta property="og:description" content="Practical software projects built with AI and coding agents.">
+  <meta property="og:url" content="https://madarasz.github.io/ai-portfolio/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="István Madarász | AI-Built Project Portfolio">
+  <meta name="twitter:description" content="Practical software projects built with AI and coding agents.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <svg class="icon-sprite" aria-hidden="true" focusable="false">
+    <symbol id="github-logo" viewBox="0 0 16 16">
+      <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.53 7.53 0 0 1 8 3.86c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/>
+    </symbol>
+    <symbol id="world-icon" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/>
+      <path d="M3 12h18M12 3c2.5 2.5 3.75 5.5 3.75 9S14.5 18.5 12 21c-2.5-2.5-3.75-5.5-3.75-9S9.5 5.5 12 3Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+  </svg>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="skip-link" href="#projects">Skip to projects</a>
+    <nav class="topline" aria-label="Primary">
+      <a class="profile-link" href="https://www.linkedin.com/in/istvanmadarasz/" aria-label="Visit István Madarász on LinkedIn">
+        <img src="assets/profile.jpeg" alt="István Madarász" width="496" height="496">
+      </a>
+      <a href="https://www.linkedin.com/in/istvanmadarasz/">LinkedIn</a>
+    </nav>
+    <section class="hero" aria-labelledby="page-title">
+      <p class="eyebrow">Portfolio of István Madarász</p>
+      <h1 id="page-title">Building practical software with coding agents.</h1>
+      <p class="hero-copy">A curated portfolio of projects crafted through AI-powered development. Created using coding agents and spec-driven methodologies with comprehensive automated testing.</p>
+      <ul class="tags hero-tools" aria-label="AI coding tools used">
+        <li>Claude Code</li>
+        <li>Codex</li>
+        <li>GitHub Copilot</li>
+        <li>Spec Driven Development</li>
+        <li>CI/CD</li>
+      </ul>
+    </section>
+  </header>
+
+  <main id="projects" class="projects" aria-labelledby="projects-title">
+    <div class="section-heading">
+      <h2 id="projects-title">Projects</h2>
+    </div>
+    <article class="project-card featured">
+      <div class="project-shot shot-rules">
+        <img src="assets/kt-rulebot.png" alt="Kill Team Rules Bot screenshot" width="598" height="629">
+      </div>
+      <div class="project-body">
+        <div class="project-heading">
+          <h3>Board Game Rules Bot</h3>
+          <a class="repo-link" href="https://github.com/madarasz/kt-rules-bot" aria-label="View Kill Team Rules Bot on GitHub">
+            <svg aria-hidden="true" focusable="false"><use href="#github-logo"></use></svg>
+            <span>GitHub</span>
+          </a>
+        </div>
+        <p>Discord rules bot for <em>Warhammer 40k: Kill Team</em>. It has the ability answer complex questions, while providing rules citations and detailed logical explanation. It uses LLM + RAG for providing responses. It's provider-agnostic and can itegrate with a huge number of models from <em>OpenAI, Anthropic, Gemini, Grok, Mistral, DeepSeek</em> and <em>Kimi</em>.</p>
+        <p>Features comprehensive unit tests, integration tests, retrieval tests, RAGAS-like LLM-as-a-judge evaluation, model comparision tests and in-production observability.</p>
+        <ul class="tags" aria-label="Technologies used">
+          <li>Python</li>
+          <li>RAG</li>
+          <li>ChromaDB</li>
+          <li>Pydantic</li>
+          <li>LLM as a judge</li>
+          <li>Spec Kit</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <div class="project-shot shot-abr">
+        <img src="assets/abr.png" alt="Always Be Running screenshot" width="1224" height="927">
+      </div>
+      <div class="project-body">
+        <div class="project-heading">
+          <h3>Always Be Running</h3>
+          <div class="project-actions">
+            <a class="repo-link" href="https://github.com/madarasz/always-be-running" aria-label="View Always Be Running on GitHub">
+              <svg aria-hidden="true" focusable="false"><use href="#github-logo"></use></svg>
+              <span>GitHub</span>
+            </a>
+            <a class="repo-link" href="https://alwaysberunning.net/" aria-label="Visit Always Be Running website">
+              <svg aria-hidden="true" focusable="false"><use href="#world-icon"></use></svg>
+              <span>Website</span>
+            </a>
+          </div>
+        </div>
+        <p>My old project migrated to PHP 8.5 (from 7.11) and Laravel 12 (from 5.2) versions. Migration was done by coding agents. Success was validated by automated code reviews and Playwright E2E tests on each version bump.</p>
+        <p><em>Always Be Running</em> is a community portal for organizing tournaments and storing results for <em>Netrunner</em> card game.</p>
+        <ul class="tags" aria-label="Technologies used">
+          <li>Migration by AI</li>
+          <li>PHP</li>
+          <li>Laravel</li>
+          <li>Vue</li>
+          <li>MySQL</li>
+          <li>Playwright</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <div class="project-shot shot-sector">
+        <img src="assets/sectorhungaricus.png" alt="Sector Hungaricus v2 screenshot" width="1049" height="614">
+      </div>
+      <div class="project-body">
+        <div class="project-heading">
+          <h3>Sector Hungaricus</h3>
+          <div class="project-actions">
+            <a class="repo-link" href="https://github.com/madarasz/sectorhungaricus-v2" aria-label="View Sector Hungaricus v2 on GitHub">
+              <svg aria-hidden="true" focusable="false"><use href="#github-logo"></use></svg>
+              <span>GitHub</span>
+            </a>
+            <a class="repo-link" href="https://sectorhungaricus.hu/en/" aria-label="Visit Sector Hungaricus website">
+              <svg aria-hidden="true" focusable="false"><use href="#world-icon"></use></svg>
+              <span>Website</span>
+            </a>
+          </div>
+        </div>
+        <p>Website for the Sector Hungaricus community. Git-based CMS (Decap CMS), gallery system, tournament tracking. Responsive design generated from Figma. Playwright E2E tests.</p>
+        <ul class="tags" aria-label="Technologies used">
+          <li>Decap CMS</li>
+          <li>React</li>
+          <li>Typescript</li>
+          <li>Next.js</li>
+          <li>Tailwind</li>
+          <li>Playwright</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <div class="project-shot shot-tables">
+        <img src="assets/tournament-tables.png" alt="Tournament Tables screenshot" width="1224" height="927">
+      </div>
+      <div class="project-body">
+        <div class="project-heading">
+          <h3>Tournament Tables</h3>
+          <div class="project-actions">
+            <a class="repo-link" href="https://github.com/madarasz/tournament-tables" aria-label="View Tournament Tables on GitHub">
+              <svg aria-hidden="true" focusable="false"><use href="#github-logo"></use></svg>
+              <span>GitHub</span>
+            </a>
+            <a class="repo-link" href="https://tables.alwaysberunning.net" aria-label="Visit Tournament Tables website">
+              <svg aria-hidden="true" focusable="false"><use href="#world-icon"></use></svg>
+              <span>Website</span>
+            </a>
+          </div>
+        </div>
+        <p>A utility for organizing tournaments. It syncs with <em>Best Coast Pairings</em> API for pairing data and then redistributes table assignments, so every player plays different terrain setups throughout the tournaments. Dockerized environment for easy deployment. Unit tests and Playwright E2E tests for validation.</p>
+        <ul class="tags" aria-label="Technologies used">
+          <li>PHP</li>
+          <li>MySQL</li>
+          <li>Docker</li>
+          <li>Playwright</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <div class="project-shot shot-datacard">
+        <img src="assets/datacard-manager.png" alt="Datacard Manager screenshot" width="1224" height="927">
+      </div>
+      <div class="project-body">
+        <div class="project-heading">
+          <h3>Datacard Manager</h3>
+          <a class="repo-link" href="https://github.com/madarasz/datacard-manager" aria-label="View Datacard Manager on GitHub">
+            <svg aria-hidden="true" focusable="false"><use href="#github-logo"></use></svg>
+            <span>GitHub</span>
+          </a>
+        </div>
+        <p>Tooling for managing <em>WH40k: Kill Team</em> datacards. Automated processing pipeline for downloading PDF sources and card extraction. It can export a custom set cards to PDF for printing.</p>
+        <p>Shared OpenAPI 3.0 definitions as a contract between frontend and backend services. Extensive unit tests and Playwright E2E tests.</p>
+        <ul class="tags" aria-label="Technologies used">
+          <li>PDF processing</li>
+          <li>Svelte</li>
+          <li>Python</li>
+          <li>OpenAPI</li>
+          <li>Pydantic</li>
+          <li>Playwright</li>
+        </ul>
+      </div>
+    </article>
+  </main>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://madarasz.github.io/ai-portfolio/#person",
+        "name": "István Madarász",
+        "url": "https://madarasz.github.io/ai-portfolio/",
+        "sameAs": ["https://www.linkedin.com/in/istvanmadarasz/"],
+        "knowsAbout": ["AI-assisted software development", "coding agents", "web applications", "tabletop gaming tools"]
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Board Game Rules Bot",
+        "codeRepository": "https://github.com/madarasz/kt-rules-bot",
+        "image": "https://madarasz.github.io/ai-portfolio/assets/kt-rulebot.png",
+        "programmingLanguage": ["Python"],
+        "keywords": ["RAG", "ChromaDB", "Pydantic", "LLM as a judge", "Spec Kit"],
+        "creator": {
+          "@id": "https://madarasz.github.io/ai-portfolio/#person"
+        },
+        "description": "Discord rules bot for Warhammer 40k: Kill Team. It answers complex questions with rules citations and detailed logical explanations, using LLM + RAG with broad model-provider support. Features comprehensive unit tests, integration tests, retrieval tests, RAGAS-like LLM-as-a-judge evaluation, model comparison tests and in-production observability."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Always Be Running",
+        "codeRepository": "https://github.com/madarasz/always-be-running",
+        "url": "https://alwaysberunning.net/",
+        "image": "https://madarasz.github.io/ai-portfolio/assets/abr.png",
+        "programmingLanguage": ["PHP", "JavaScript"],
+        "keywords": ["Migration by AI", "Laravel", "Vue", "MySQL", "Playwright"],
+        "creator": {
+          "@id": "https://madarasz.github.io/ai-portfolio/#person"
+        },
+        "description": "Community portal for organizing tournaments and storing results for the Netrunner card game. The project was migrated to PHP 8.5 and Laravel 12 by coding agents, with validation through automated code reviews and Playwright E2E tests on each version bump."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Sector Hungaricus",
+        "codeRepository": "https://github.com/madarasz/sectorhungaricus-v2",
+        "url": "https://sectorhungaricus.hu/en/",
+        "image": "https://madarasz.github.io/ai-portfolio/assets/sectorhungaricus.png",
+        "programmingLanguage": ["TypeScript", "JavaScript"],
+        "keywords": ["Decap CMS", "React", "Next.js", "Tailwind", "Playwright"],
+        "creator": {
+          "@id": "https://madarasz.github.io/ai-portfolio/#person"
+        },
+        "description": "Website for the Sector Hungaricus community with a Git-based CMS, gallery system, tournament tracking, responsive design generated from Figma, and Playwright E2E tests."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Tournament Tables",
+        "codeRepository": "https://github.com/madarasz/tournament-tables",
+        "url": "https://tables.alwaysberunning.net",
+        "image": "https://madarasz.github.io/ai-portfolio/assets/tournament-tables.png",
+        "programmingLanguage": ["PHP"],
+        "keywords": ["MySQL", "Docker", "Playwright", "Best Coast Pairings API"],
+        "creator": {
+          "@id": "https://madarasz.github.io/ai-portfolio/#person"
+        },
+        "description": "Utility for organizing tournaments. It syncs with the Best Coast Pairings API for pairing data and redistributes table assignments so every player plays different terrain setups throughout tournaments. Includes a Dockerized environment, unit tests, and Playwright E2E tests."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Datacard Manager",
+        "codeRepository": "https://github.com/madarasz/datacard-manager",
+        "image": "https://madarasz.github.io/ai-portfolio/assets/datacard-manager.png",
+        "programmingLanguage": ["Python", "JavaScript"],
+        "keywords": ["PDF processing", "Svelte", "OpenAPI", "Pydantic", "Playwright"],
+        "creator": {
+          "@id": "https://madarasz.github.io/ai-portfolio/#person"
+        },
+        "description": "Tooling for managing WH40k: Kill Team datacards. Includes an automated processing pipeline for downloading PDF sources and card extraction, PDF export for custom card sets, shared OpenAPI 3.0 definitions between frontend and backend services, extensive unit tests, and Playwright E2E tests."
+      }
+    ]
+  }
+  </script>
+</body>
+</html>

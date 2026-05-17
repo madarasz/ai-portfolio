@@ -209,7 +209,7 @@
 
   .project-card {
     --card-rest-x: 0%;
-    --card-edge-x: clamp(-34vw, calc(((100vw - 100%) / -2) + 2px - var(--card-rest-x)), 0px);
+    --card-edge-x: clamp(-17vw, calc(((100vw - 100%) / -2) + 2px - var(--card-rest-x)), 0px);
     display: grid;
     grid-template-columns: minmax(220px, 0.9fr) minmax(260px, 1.1fr);
     gap: 22px;
@@ -226,7 +226,7 @@
 
   .project-card:nth-of-type(even) {
     --card-rest-x: clamp(0px, calc((100vw - 100%) / 2 - 2px), 5%);
-    --card-edge-x: clamp(0px, calc((100vw - 100%) / 2 - var(--card-rest-x) - 2px), 34vw);
+    --card-edge-x: clamp(0px, calc((100vw - 100%) / 2 - var(--card-rest-x) - 2px), 17vw);
   }
 
   .project-shot {
@@ -342,7 +342,7 @@
     }
 
     to {
-      transform: translate3d(6vw, -3vh, 0) scale(1.12);
+      transform: translate3d(3vw, -1.5vh, 0) scale(1.06);
     }
   }
 
@@ -350,8 +350,8 @@
     0%,
     10% {
       opacity: 0.34;
-      filter: blur(18px) saturate(0.72);
-      transform: translateX(calc(var(--card-rest-x) + var(--card-edge-x))) scale(0.985);
+      filter: blur(9px) saturate(0.72);
+      transform: translateX(calc(var(--card-rest-x) + var(--card-edge-x))) scale(0.9925);
     }
 
     33%,
